@@ -1,0 +1,286 @@
+$color_white: #fff;
+$color_1: #2b80b9;
+$color_2: #f2f7ba;
+$background-color_1: #2b80b9;
+$background-color_2: #f2f7ba;
+
+aside {
+    grid-area: aside;
+    background-color: $background-color_1;
+
+    svg {
+        fill: $color_white;
+        height: 50px;
+        width: 50px;
+        padding-top: 10px;
+    }
+
+    h2 {
+        font-size: 1.7em;
+        grid-column: 2;
+        grid-row: 2;
+        color: $color_2;
+
+        &:after {
+            color: $color_white;
+            display: block;
+            height: 2px;
+            background-color: $background-color_2;
+            width: 10em;
+            content: " ";
+            margin: 15px auto;
+        }
+    }
+
+    /* les + populaire */
+    .plus_populaire {
+        border: 1px solid $color_2;
+        border-radius: 10px;
+        box-shadow: 7px 5px 5px $color_2;
+        width: 90%;
+        margin-left: 20px;
+        margin-bottom: 10px;
+
+        /* Notation*/
+        .notation {
+            font-size: 1.3em;
+            color: $color_white;
+            margin-top: 10px;
+
+            svg {
+                fill: $color_white;
+                height: 30px;
+                width: 30px;
+                margin-left: 100px;
+            }
+        }
+
+        h3 {
+            color: $color_white;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        #steven {
+            border-radius: 100px;
+            height: 40px;
+        }
+
+        #emma {
+            border-radius: 100px;
+            height: 40px;
+        }
+
+        #julia {
+            border-radius: 100px;
+            height: 40px;
+        }
+
+        #johanna84 {
+            border-radius: 100px;
+            height: 40px;
+        }
+
+        #nathalie {
+            border-radius: 100px;
+            height: 40px;
+        }
+
+        span {
+            color: $color_white;
+        }
+
+        svg {
+            fill: $color_white;
+            height: 30px;
+            width: 30px;
+        }
+
+        #dest1 {
+            width: 25vw;
+            border: 5px solid $color_white;
+            margin-top: 10px;
+            filter: grayscale(30%);
+
+                &:hover {
+                    filter: grayscale(0%);
+                }
+        }
+
+        #miami {
+            width: 25vw;
+            border: 5px solid $color_white;
+            margin-top: 10px;
+            filter: grayscale(30%);
+
+                &:hover {
+                    filter: grayscale(0%);
+                }
+        }
+
+        #maldives {
+            width: 25vw;
+            border: 5px solid $color_white;
+            margin-top: 10px;
+            filter: grayscale(30%);
+
+                &:hover {
+                    filter: grayscale(0%);
+                }
+        }
+
+        #la {
+            width: 25vw;
+            border: 5px solid $color_white;
+            margin-top: 10px;
+            filter: grayscale(30%);
+
+                &:hover {
+                    filter: grayscale(0%);
+                }
+        }
+
+
+        #toronto {
+            width: 25vw;
+            border: 5px solid $color_white;
+            margin-top: 10px;
+            filter: grayscale(30%);
+
+                &:hover {
+                    filter: grayscale(0%);
+                }
+        }
+
+        button {
+            background-color: $background-color_2;
+            color: $color_1;
+            border-radius: 8px;
+            font-size: 1.2em;
+            padding: 8px 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            grid-column: 1;
+            grid-row: 5;
+
+            &:hover{
+                background-color: $background-color_1;
+                color: $color_2;
+            }
+        }
+    }
+
+    button {
+        background-color: $background-color_2;
+        color: $color_1;
+        border-radius: 8px;
+        font-size: 1.2em;
+        padding: 8px 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        grid-column: 1;
+        grid-row: 5;
+
+        &:hover{
+            background-color: $background-color_1;
+            color: $color_2;
+        }
+    }
+}
+
+@media screen and (min-width:768px) and (max-width: 991px) {
+    aside {
+        .plus_populaire {
+            h3 {
+                font-size: 1.7em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #plus_pop {
+        svg {
+            padding-top: 10px;
+        }
+        .plus_populaire {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            .notation {
+                grid-column: 2;
+
+                svg {
+                    height: 30px;
+                    width: 30px;
+                    margin-left: 40px;
+                }
+            }
+
+            h3 {
+                grid-column: 2;
+            }
+
+            cite {
+                grid-column: 2;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+
+                img {
+                    margin: 0 auto;
+                    grid-column: 2;
+                }
+
+                span {
+                    margin: 0 auto;
+                    grid-column: 2;
+                    display: grid;
+                    grid-template-columns: 1fr;
+
+                    svg {
+                        grid-column: 1;
+                        justify-self: center;
+                    }
+                }
+            }
+
+            #dest1 {
+                width: 85vw;
+                grid-column: 2;
+                justify-self: center;
+            }
+
+            #miami {
+                width: 85vw;
+                grid-column: 2;
+                justify-self: center;
+            }
+    
+            #maldives {
+                width: 85vw;
+                grid-column: 2;
+                justify-self: center;
+            }
+    
+            #la {
+                width: 85vw;
+                grid-column: 2;
+                justify-self: center;
+            }
+    
+    
+            #toronto {
+                width: 85vw;
+                grid-column: 2;
+                justify-self: center;
+            }
+
+            button {
+                grid-column: 2;
+                width: 30vw;
+                justify-self: center;
+            }
+        }
+    }
+}

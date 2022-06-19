@@ -1,0 +1,97 @@
+$color_white: #fff;
+$color_1: #2b80b9;
+$background-color_1: #2b80b9;
+$background-color_2: #f2f7ba;
+
+#partners {
+    grid-area: partners;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr 1fr;
+
+    #partenaire {
+        background-image: linear-gradient(rgba(116, 230, 214, 0.4),
+                rgba(250, 247, 48, 0.3)),
+            url(../images/plane.jpg);
+        background-position: center;
+        background-size: cover;
+        grid-column: span 3;
+        grid-row: 1;
+
+        svg {
+            height: 50px;
+            width: 50px;
+            fill: $color_1;
+            padding-top: 15px;
+        }
+
+        h2 {
+            color: $color_1;
+
+            &:after {
+                color: $color_white;
+                display: block;
+                height: 2px;
+                background-color: $background-color_2;
+                width: 10em;
+                content: " ";
+                margin: 15px auto;
+            }
+        }
+
+        h4 {
+            color: $color_white;
+
+            span {
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    #company {
+        background-color: $background-color_1;
+        grid-column: span 3;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto;
+        place-items: center center;
+        padding-top: 50px;
+        padding-bottom: 20px;
+
+        h3 {
+            color: $color_white;
+        }
+
+        img {
+            height: 200px;
+            width: 200px;
+            transition: transform .2s;
+
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+
+        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #partners {
+        grid-area: partners;
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 50vh auto;
+
+        #company {
+            display: grid;
+            grid-template-columns: auto;
+
+            img {
+                height: 150px;
+                width: 150px;
+            }
+        }
+    }
+}

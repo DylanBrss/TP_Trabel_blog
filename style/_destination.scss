@@ -1,0 +1,115 @@
+$color_white: #fff;
+$color_1: #2b80b9;
+$color_2: #f2f7ba;
+$background-color_1: #2b80b9;
+$background-color_2: #f2f7ba;
+
+#destination {
+    grid-area: destination;
+    display: grid;
+    grid-template-columns: 5vw repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    background-image: linear-gradient(rgba(116, 230, 214, 0.4),
+            rgba(250, 247, 48, 0.3)),
+        url(../images/bali.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    #a_la_une {
+        //border: 1px solid #000;
+        border-radius: 10px;
+        grid-column: 2;
+        grid-row: 2;
+        background-color: $background-color_1;
+        padding: 30px;
+        margin: 30px 30px;
+
+        svg {
+            height: 50px;
+            width: 50px;
+            fill: $color_white;
+        }
+
+        h2 {
+            color: $color_white;
+
+            &:after {
+                color: $color_white;
+                display: block;
+                height: 2px;
+                background-color: $background-color_2;
+                width: 10em;
+                content: " ";
+                margin: 15px auto;
+            }
+        }
+
+        h1 {
+            color: $color_white;
+            font-size: 3rem;
+        }
+
+        p {
+            color: $color_white;
+        }
+
+        img {
+            border-radius: 100px;
+            height: 40px;
+            margin-top: 20px;
+        }
+
+        span {
+            color: $color_white;
+            font-style: italic;
+            margin-left: 10px;
+
+        }
+
+        button {
+            background-color: $background-color_2;
+            color: $color_1;
+            border-radius: 8px;
+            font-size: 1.2em;
+            padding: 8px 15px;
+            margin-top: 20px;
+
+            &:hover {
+                background-color: $background-color_1;
+                color: $color_2;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #destination {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        background-image: linear-gradient(rgba(116, 230, 214, 0.4),
+                rgba(250, 247, 48, 0.3)),
+            url(../images/bali.jpg);
+        background-position: center;
+        color: $color_white;
+        background-attachment: unset;
+
+        #a_la_une {
+            grid-row: 3;
+            grid-column: 2
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #destination {
+        #a_la_une {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,575 @@
+$color_white: #fff;
+$color_1: #2b80b9;
+$color_2: #f2f7ba;
+$background-color_1: #2b80b9;
+$background-color_2: #f2f7ba;
+
+#article {
+
+    /* article intro */
+    #articleIntro {
+        grid-area: articleIntro;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        place-items: center center;
+
+        #dernierArticle {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4 1fr);
+            place-items: center;
+
+            svg {
+                height: 50px;
+                width: 50px;
+                fill: #2b80b9;
+                grid-column: 2;
+                grid-row: 1;
+                margin-top: 30px;
+            }
+
+            h2 {
+                font-size: 1.7em;
+                grid-column: 2;
+                grid-row: 2;
+                color: $color_1;
+
+                &:after {
+                    color: $color_white;
+                    display: block;
+                    height: 2px;
+                    background-color: $color_2;
+                    width: 10;
+                    content: " ";
+                    margin: 15px auto;
+                }
+            }
+
+            #montreal {
+                grid-column: 1;
+                grid-row: 3;
+                height: 150px;
+                width: 200px;
+                filter: grayscale(50%);
+                ;
+
+                &:hover {
+                    filter: grayscale(0%);
+                }
+            }
+
+            #sydney {
+                grid-column: 2;
+                grid-row: 3;
+                height: 150px;
+                width: 200px;
+                filter: grayscale(50%);
+
+                &:hover {
+                    filter: grayscale(0%);
+                }
+            }
+
+            #rio {
+                grid-column: 3;
+                grid-row: 3;
+                height: 150px;
+                width: 200px;
+                filter: grayscale(30%);
+
+                &:hover {
+                    filter: grayscale(0%);
+                }
+            }
+
+            button {
+                font-size: 1.2em;
+                background-color: $background-color_2;
+                color: $color_1;
+                border-radius: 8px;
+                padding: 10px;
+                grid-column: 2;
+                grid-row: 4;
+                margin-top: 30px;
+
+                &:hover {
+                    background-color: $background-color_1;
+                    color: $color_2;
+                }
+            }
+        }
+    }
+
+    /* article 1 */
+    #articleMontreal {
+        grid-area: article1;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        place-items: center center;
+
+        &:before {
+            color: white;
+            display: block;
+            height: 3px;
+            background-color: $background-color_1;
+            width: 80%;
+            content: " ";
+            margin: 15px auto;
+        }
+
+        #article1 {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(5 1fr);
+            place-items: center;
+            grid-gap: 10px;
+
+            h2 {
+                font-size: 1.7em;
+                grid-column: 1;
+                grid-row: 1;
+                color: $color_1;
+
+                &:after {
+                    color: $color_white;
+                    display: block;
+                    height: 2px;
+                    background-color: $background-color_2;
+                    width: 10em;
+                    content: " ";
+                    margin: 15px auto;
+                }
+            }
+
+            #emma {
+                border-radius: 100px;
+                height: 40px;
+                grid-column: 1;
+                grid-row: 2;
+            }
+
+            svg {
+                fill: #2b80b9;
+                width: 30px;
+                height: 30px;
+                grid-column: 1;
+                grid-row: 2;
+                margin-left: 50px;
+            }
+
+            #art1 {
+                width: 35vw;
+                border: 5px solid $color_2;
+                grid-column: 1;
+                grid-row: 3;
+                filter: grayscale(30%);
+
+                &:hover {
+                    filter: grayscale(0%);
+                }
+            }
+
+            p {
+                grid-column: 1;
+                grid-row: 4;
+                margin-top: 50px;
+            }
+
+            button {
+                background-color: $background-color_2;
+                color: $color_1;
+                border-radius: 8px;
+                font-size: 1.2em;
+                padding: 8px 15px;
+                margin-top: 50px;
+                grid-column: 1;
+                grid-row: 5;
+
+                &:hover {
+                    background-color: $background-color_1;
+                    color: $color_2;
+                }
+            }
+        }
+    }
+
+    /* article 2 */
+    #articleSydney {
+        grid-area: article1;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        place-items: center center;
+
+        &:before {
+            color: white;
+            display: block;
+            height: 3px;
+            background-color: $background-color_1;
+            width: 80%;
+            content: " ";
+            margin: 15px auto;
+        }
+
+        #article2 {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(5 1fr);
+            place-items: center;
+            grid-gap: 10px;
+
+            h2 {
+                font-size: 1.7em;
+                grid-column: 1;
+                grid-row: 1;
+                color: $color_1;
+
+                &:after {
+                    color: $color_white;
+                    display: block;
+                    height: 2px;
+                    background-color: $background-color_2;
+                    width: 10em;
+                    content: " ";
+                    margin: 15px auto;
+                }
+            }
+
+            #steven {
+                border-radius: 100px;
+                height: 40px;
+                grid-column: 1;
+                grid-row: 2;
+            }
+
+            svg {
+                fill: #2b80b9;
+                width: 30px;
+                height: 30px;
+                grid-column: 1;
+                grid-row: 2;
+                margin-left: 50px;
+            }
+
+            #art2 {
+                width: 35vw;
+                border: 5px solid $color_2;
+                grid-column: 1;
+                grid-row: 3;
+                filter: grayscale(30%);
+
+                &:hover {
+                    filter: grayscale(0%);
+                }
+            }
+
+            p {
+                grid-column: 1;
+                grid-row: 4;
+                margin-top: 50px;
+            }
+
+            button {
+                background-color: $background-color_2;
+                color: $color_1;
+                border-radius: 8px;
+                font-size: 1.2em;
+                padding: 8px 15px;
+                margin-top: 50px;
+                grid-column: 1;
+                grid-row: 5;
+
+                &:hover {
+                    background-color: $background-color_1;
+                    color: $color_2;
+                }
+            }
+        }
+    }
+
+    /* article 3 */
+    #articleRio {
+        grid-area: article3;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        place-items: center center;
+
+        &:before {
+            color: $color_white;
+            display: block;
+            height: 3px;
+            background-color: $background-color_1;
+            width: 80%;
+            content: " ";
+            margin: 15px auto;
+        }
+
+        #article3 {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(5 1fr);
+            place-items: center;
+            grid-gap: 10px;
+
+            h2 {
+                font-size: 1.7em;
+                grid-column: 1;
+                grid-row: 1;
+                color: $color_1;
+
+                &:after {
+                    color: $color_white;
+                    display: block;
+                    height: 2px;
+                    background-color: $background-color_2;
+                    width: 10em;
+                    content: " ";
+                    margin: 15px auto;
+                }
+            }
+
+            #julia {
+                border-radius: 100px;
+                height: 40px;
+                grid-column: 1;
+                grid-row: 2;
+            }
+
+            svg {
+                fill: #2b80b9;
+                width: 30px;
+                height: 30px;
+                grid-column: 1;
+                grid-row: 2;
+                margin-left: 50px;
+            }
+
+            #art3 {
+                width: 35vw;
+                border: 5px solid $color_2;
+                grid-column: 1;
+                grid-row: 3;
+                filter: grayscale(30%);
+
+                &:hover {
+                    filter: grayscale(0%);
+                }
+            }
+
+            p {
+                grid-column: 1;
+                grid-row: 4;
+                margin-top: 50px;
+            }
+
+            button {
+                background-color: $background-color_2;
+                color: $color_1;
+                border-radius: 8px;
+                font-size: 1.2em;
+                padding: 8px 15px;
+                margin-top: 50px;
+                grid-column: 1;
+                grid-row: 5;
+
+                &:hover {
+                    background-color: $background-color_1;
+                    color: $color_2;
+                }
+            }
+        }
+    }
+
+    &:after {
+        color: $color_white;
+        display: block;
+        height: 3px;
+        background-color: $background-color_1;
+        width: 80%;
+        content: " ";
+        margin: 15px auto;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #article {
+
+        /* article intro */
+        #articleIntro {
+            grid-area: articleIntro;
+
+
+            #dernierArticle {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+                grid-gap: 20px;
+
+                #montreal {
+                    grid-column: 2;
+                    grid-row: 3;
+                    height: 150px;
+                    width: 200px;
+                    filter: grayscale(50%);
+
+                    &:hover {
+                        filter: grayscale(0%);
+                    }
+                }
+
+                #sydney {
+                    grid-column: 2;
+                    grid-row: 4;
+                    height: 150px;
+                    width: 200px;
+                    filter: grayscale(50%);
+
+                    &:hover {
+                        filter: grayscale(0%);
+                    }
+                }
+
+                #rio {
+                    grid-column: 2;
+                    grid-row: 5;
+                    height: 150px;
+                    width: 200px;
+                    filter: grayscale(30%);
+
+                    &:hover {
+                        filter: grayscale(0%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #article {
+        #articleIntro {
+            display: grid;
+            grid-template-columns: 100vw;
+
+            #dernierArticle {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+                grid-gap: 20px;
+
+                #montreal {
+                    grid-column: 2;
+                    grid-row: 3;
+                    height: 150px;
+                    width: auto;
+                    filter: grayscale(50%);
+
+                    &:hover {
+                        filter: grayscale(0%);
+                    }
+                }
+
+                #sydney {
+                    grid-column: 2;
+                    grid-row: 4;
+                    height: 150px;
+                    width: auto;
+                    filter: grayscale(50%);
+
+                    &:hover {
+                        filter: grayscale(0%);
+                    }
+                }
+
+                #rio {
+                    grid-column: 2;
+                    grid-row: 5;
+                    height: 150px;
+                    width: auto;
+                    filter: grayscale(30%);
+
+                    &:hover {
+                        filter: grayscale(0%);
+                    }
+                }
+            }
+
+            cite {
+                display: flex;
+                flex-direction: column;
+                margin: 10px;
+
+                img {
+                    margin: 0 auto;
+                }
+
+                span {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        #articleMontreal {
+            #article1 {
+                display: grid;
+                grid-template-columns: 100vw;
+
+                cite {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 10px;
+
+                    img {
+                        margin: 0 auto;
+                    }
+
+                    span {
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+
+        #articleSydney {
+            #article2 {
+                display: grid;
+                grid-template-columns: 100vw;
+
+                cite {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 10px;
+
+                    img {
+                        margin: 0 auto;
+                    }
+
+                    span {
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+
+        #articleRio {
+            #article3 {
+                display: grid;
+                grid-template-columns: 100vw;
+
+                cite {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 10px;
+
+                    img {
+                        margin: 0 auto;
+                    }
+
+                    span {
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
